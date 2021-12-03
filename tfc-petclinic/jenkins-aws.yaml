@@ -1,0 +1,11 @@
+#cloud-config
+users:
+  - default
+package_update: true
+package_upgrade: true
+packages:
+  - docker.io
+runcmd:
+  - [ systemctl, daemon-reload ]
+  - [ systemctl, enable, docker.service ]
+  - [ systemctl, start, --no-block, docker.service ]

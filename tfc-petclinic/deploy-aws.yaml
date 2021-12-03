@@ -1,0 +1,7 @@
+#cloud-config
+users:
+  - default
+package_update: true
+package_upgrade: true
+packages:
+  - openjdk-11-jre-headless
