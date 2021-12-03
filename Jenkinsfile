@@ -6,7 +6,7 @@ pipeline {
 	stages {
 		stage('Build') {
 			steps {
-				git branch: "${params.BRANCH}", url: 'https://github.com/jenkinsci/git-parameter-plugin.git'
+				git branch: "${params.BRANCH}", url: 'https://github.com/koolkittykat69/spring-petclinic'
 				sh "pwd && ls && ./mvnw -Dmaven.test.failure.ignore=true clean package"
 			}
 
