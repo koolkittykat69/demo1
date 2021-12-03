@@ -7,7 +7,7 @@ pipeline {
 		stage('Build') {
 			steps {
 				git branch: "${params.BRANCH}", url: 'https://github.com/jenkinsci/git-parameter-plugin.git'
-				sh "./mvnw -Dmaven.test.failure.ignore=true clean package"
+				sh "pwd && ls && ./mvnw -Dmaven.test.failure.ignore=true clean package"
 			}
 
 			post {
